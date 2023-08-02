@@ -1,0 +1,1357 @@
+{
+	"info": {
+		"_postman_id": "4ba75408-ef14-484a-b007-70fc7324db73",
+		"name": "Anil WORK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Common APIs ",
+					"item": [
+						{
+							"name": "Get All Cmmon Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/get-all-data",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"get-all-data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Cmmon Details copy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/get-country-state-city",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"get-country-state-city"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": " API for use in any modules.",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Auth Collection",
+					"item": [
+						{
+							"name": "Login In API",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\" : \"vikas123@mailinator.com\",\n\t\"password\" : \"vikas123\"\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/auth/login",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"vikas123@mailinator.com\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/forgot-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"last_name\": \"dhameliya\", \"password\": \"12345678\", \"mobile\": \"8866569630\", \"email\": \"anil11@gmail.com\", \"confirm_password\": \"12345678\", \"first_name\": \"Anil\"\n\n}"
+								},
+								"url": {
+									"raw": "{{live}}/api/auth/register",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Accounts  APIS",
+					"item": [
+						{
+							"name": "Update Password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"old_password\" : \"vikas123\",\n\t\"password\" : \"vikas123\",\n\t\"confirm_password\" : \"vikas123\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/account/update-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"account",
+										"update-password"
+									]
+								},
+								"description": "User can update their passwprd"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "vikas",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "ukani",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "vikas123@mailinator.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "9876543210",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Hardik P/Desktop/page/1/78587562_426551851581600_4898895523802513408_n.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{live}}/api/profile-update",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"profile-update"
+									]
+								},
+								"description": "User can update their passwprd"
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/get-profile-detail",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"get-profile-detail"
+									]
+								},
+								"description": "User can update their passwprd"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 4,\n    \"name\": \"Anil u Address\", \n    \"mobile\" : \"9876543210\",\n    \"alternate_mobile\": 12456789987,\n    \"pincode\": 395010,\n    \"line1\" : \"Santiniketan soc\",\n    \"line2\" : \"Near Dangigev Soc\",\n    \"country_id\" : 1,\n    \"state_id\" : 1,\n    \"city_id\" : 1\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/account/add-address",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"add-address"
+									]
+								},
+								"description": "User can add Multiple Delevery Addresses"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Address By Id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 4,\n    \"name\": \"Vikas Updated Address\",\n    \"mobile\": \"9876543210\",\n    \"alternate_mobile\": \"12456789987\",\n    \"pincode\": 395010,\n    \"line1\": \"Updated Line 1\",\n    \"line2\": \"Upted Line 2\",\n    \"country_id\": 2,\n    \"state_id\": 2,\n    \"city_id\": 2,\n    \"is_default\": 0\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/account/update-address/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"account",
+										"update-address",
+										"1"
+									]
+								},
+								"description": "User can add Multiple Delevery Addresses"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Address List By Users",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user_id\" : 4,\n    \"relation\": [\n        \"country\",\n        \"state\",\n        \"city\"\n    ],\n    \"country_list\": [\n        \"id\",\n        \"name\",\n        \"is_active\"\n    ],\n    \"state_list\": [\n        \"id\",\n        \"name\",\n        \"is_active\"\n    ],\n    \"city_list\": [\n        \"id\",\n        \"name\",\n        \"is_active\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/account/get-address-list",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"get-address-list"
+									]
+								},
+								"description": "Get Address List With Country State City"
+							},
+							"response": []
+						},
+						{
+							"name": "Set Active Address",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/account/set-active-address/1",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"set-active-address",
+										"1"
+									]
+								},
+								"description": "User can add Multiple Delevery Addresses\n\n\t* id -> address id you want to update"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Address Details By Address ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/account/get-address/1",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"get-address",
+										"1"
+									]
+								},
+								"description": "User can add Multiple Delevery Addresses\n\n\t* id -> address id you want to update"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Address Details By Address ID Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/account/delete-address/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"account",
+										"delete-address",
+										"5"
+									]
+								},
+								"description": "User can add Multiple Delevery Addresses\n\n\t* id -> address id you want to update"
+							},
+							"response": []
+						}
+					],
+					"description": "User Account related apis after login",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "List of All Product By main category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_id\": 2,\n    \"relation\": [\n        \"customer_rating\"\n    ] \n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/product-list",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"product-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Details for Product Details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{local}}/api/product-detail/11",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"product-detail",
+										"11"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Details for Product Details",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{local}}/api/product-detail/11",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"api",
+												"product-detail",
+												"11"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:1001"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 Dec 2019 17:33:51 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 Dec 2019 17:33:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "86400"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Authorization, X-Requested-With"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"data\": {\n        \"id\": 11,\n        \"category_id\": 2,\n        \"name\": \"test\",\n        \"image\": \"http://localhost:1001/uploaded/images/categories/ic_tshirt\",\n        \"price\": 242,\n        \"size\": \"4242\",\n        \"size_number\": \"242424\",\n        \"description\": \"242424\",\n        \"is_active\": 1,\n        \"created_at\": \"2019-12-08 16:20:19\",\n        \"updated_at\": \"2019-12-11 17:03:39\",\n        \"customer_rating\": [\n            {\n                \"id\": 3,\n                \"product_id\": 11,\n                \"user_id\": 4,\n                \"review\": null,\n                \"rate\": 2,\n                \"created_at\": \"2019-12-18 14:47:55\",\n                \"customer_detail\": {\n                    \"id\": 4,\n                    \"first_name\": \"vikas\",\n                    \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                    \"email\": \"vikas123@mailinator.com\",\n                    \"created_at\": \"2019-11-24 07:37:14\"\n                }\n            },\n            {\n                \"id\": 6,\n                \"product_id\": 11,\n                \"user_id\": 4,\n                \"review\": null,\n                \"rate\": 2,\n                \"created_at\": \"2019-12-18 14:47:55\",\n                \"customer_detail\": {\n                    \"id\": 4,\n                    \"first_name\": \"vikas\",\n                    \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                    \"email\": \"vikas123@mailinator.com\",\n                    \"created_at\": \"2019-11-24 07:37:14\"\n                }\n            },\n            {\n                \"id\": 9,\n                \"product_id\": 11,\n                \"user_id\": 4,\n                \"review\": null,\n                \"rate\": 2,\n                \"created_at\": \"2019-12-18 14:47:55\",\n                \"customer_detail\": {\n                    \"id\": 4,\n                    \"first_name\": \"vikas\",\n                    \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                    \"email\": \"vikas123@mailinator.com\",\n                    \"created_at\": \"2019-11-24 07:37:14\"\n                }\n            },\n            {\n                \"id\": 12,\n                \"product_id\": 11,\n                \"user_id\": 4,\n                \"review\": null,\n                \"rate\": 2,\n                \"created_at\": \"2019-12-18 14:47:55\",\n                \"customer_detail\": {\n                    \"id\": 4,\n                    \"first_name\": \"vikas\",\n                    \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                    \"email\": \"vikas123@mailinator.com\",\n                    \"created_at\": \"2019-11-24 07:37:14\"\n                }\n            },\n            {\n                \"id\": 2,\n                \"product_id\": 11,\n                \"user_id\": 4,\n                \"review\": \"This Product was too good!\",\n                \"rate\": 2,\n                \"created_at\": \"2019-12-17 17:03:15\",\n                \"customer_detail\": {\n                    \"id\": 4,\n                    \"first_name\": \"vikas\",\n                    \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                    \"email\": \"vikas123@mailinator.com\",\n                    \"created_at\": \"2019-11-24 07:37:14\"\n                }\n            }\n        ],\n        \"ratting\": 2,\n        \"ratting_count\": 5\n    },\n    \"message\": \"Product details retrieve successfully.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Product Detail Review By Listing ( View All Reviews )",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\": 11,\n    \"relation\": [\n        \"customer_detail\"\n    ],\n    \"customer_detail_list\": [\n        \"id\",\n        \"first_name\",\n        \"photo\",\n        \"email\",\n        \"created_at\"\n    ],\n    \"list\": [\n        \"id\",\n        \"product_id\",\n        \"user_id\",\n        \"review\",\n        \"rate\",\n        \"created_at\"\n    ],\n    \"page\": 1,\n    \"limit\": 5\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/product-detail-review-list",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"product-detail-review-list"
+									]
+								},
+								"description": "Get All Review of this product with paginations"
+							},
+							"response": [
+								{
+									"name": "Get Product Detail Review By Listing ( View All Reviews )",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"product_id\": 11,\n    \"relation\": [\n        \"customer_detail\"\n    ],\n    \"customer_detail_list\": [\n        \"id\",\n        \"first_name\",\n        \"photo\",\n        \"email\",\n        \"created_at\"\n    ],\n    \"list\": [\n        \"id\",\n        \"product_id\",\n        \"user_id\",\n        \"review\",\n        \"rate\",\n        \"created_at\"\n    ],\n    \"page\": 1,\n    \"limit\": 5\n}"
+										},
+										"url": {
+											"raw": "{{local}}/api/product-detail-review-list",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"api",
+												"product-detail-review-list"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:1001"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 Dec 2019 17:23:28 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 Dec 2019 17:23:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "86400"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Authorization, X-Requested-With"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"product_id\": 11,\n            \"user_id\": 4,\n            \"review\": null,\n            \"rate\": 2,\n            \"created_at\": \"2019-12-18 14:47:55\",\n            \"customer_detail\": {\n                \"id\": 4,\n                \"first_name\": \"vikas\",\n                \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                \"email\": \"vikas123@mailinator.com\",\n                \"created_at\": \"2019-11-24 07:37:14\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"product_id\": 11,\n            \"user_id\": 4,\n            \"review\": null,\n            \"rate\": 2,\n            \"created_at\": \"2019-12-18 14:47:55\",\n            \"customer_detail\": {\n                \"id\": 4,\n                \"first_name\": \"vikas\",\n                \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                \"email\": \"vikas123@mailinator.com\",\n                \"created_at\": \"2019-11-24 07:37:14\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"product_id\": 11,\n            \"user_id\": 4,\n            \"review\": null,\n            \"rate\": 2,\n            \"created_at\": \"2019-12-18 14:47:55\",\n            \"customer_detail\": {\n                \"id\": 4,\n                \"first_name\": \"vikas\",\n                \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                \"email\": \"vikas123@mailinator.com\",\n                \"created_at\": \"2019-11-24 07:37:14\"\n            }\n        },\n        {\n            \"id\": 12,\n            \"product_id\": 11,\n            \"user_id\": 4,\n            \"review\": null,\n            \"rate\": 2,\n            \"created_at\": \"2019-12-18 14:47:55\",\n            \"customer_detail\": {\n                \"id\": 4,\n                \"first_name\": \"vikas\",\n                \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                \"email\": \"vikas123@mailinator.com\",\n                \"created_at\": \"2019-11-24 07:37:14\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"product_id\": 11,\n            \"user_id\": 4,\n            \"review\": \"This Product was too good!\",\n            \"rate\": 2,\n            \"created_at\": \"2019-12-17 17:03:15\",\n            \"customer_detail\": {\n                \"id\": 4,\n                \"first_name\": \"vikas\",\n                \"photo\": \"http://localhost:1001/uploaded/images/users/5dfa5c1bc31a7-78587562-426551851581600-4898895523802513408-n\",\n                \"email\": \"vikas123@mailinator.com\",\n                \"created_at\": \"2019-11-24 07:37:14\"\n            }\n        }\n    ],\n    \"message\": \"Review and rate details retrieve successfully.\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Add Product to Cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\" : 3,\n\t\"quantity\" : 1\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/add-to-cart",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"add-to-cart"
+									]
+								},
+								"description": "Add Product to cart"
+							},
+							"response": []
+						},
+						{
+							"name": "Cart Listing",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user_id\" : 5,\n\t\"relation\" : [\"product\"]\n}"
+								},
+								"url": {
+									"raw": "{{live}}/api/cart-list",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"cart-list"
+									]
+								},
+								"description": "Add Product to cart"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\" : 2\t ,\n\t\"quantity\" : 1\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/delete-to-cart/4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"delete-to-cart",
+										"4"
+									]
+								},
+								"description": "Add Product to cart"
+							},
+							"response": []
+						},
+						{
+							"name": "Remove 1 quantity from cart by id",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\" : 2\t ,\n\t\"quantity\" : 1\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/remove-cart-quantity/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"remove-cart-quantity",
+										"1"
+									]
+								},
+								"description": "Add Product to cart"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "Place Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"address_detail\" : {\r\n    \"line1\" : \"harekrishna socientry, me.borda farm\",\r\n    \"pincode\" : \"395010\",\r\n    \"state_id\" : \"1\",\r\n    \"line2\" : \"punagam, Surat\",\r\n    \"country_id\" : \"1\",\r\n    \"alternate_mobile\" : \"9726253099\",\r\n    \"mobile\" : \"8866569630\",\r\n    \"city_id\" : \"1\"\r\n  },\r\n  \"product_details\" : [\r\n    {\r\n      \"name\" : \"Vikas Lead Up to date\",\r\n      \"description\" : \"ajsdjkahsdjhajkshd\",\r\n      \"size_number\" : \"asjkdaskjdh\",\r\n      \"image\" : \"http:\\/\\/comedyclassroom.com\\/uploaded\\/images\\/categories\\/ic_tshirt\",\r\n      \"id\" : \"15\",\r\n      \"category_id\" : \"1\",\r\n      \"size\" : \"asjkdhajk\",\r\n      \"is_active\" : true,\r\n      \"price\" : \"125.00\"\r\n    },\r\n    {\r\n      \"name\" : \"test\",\r\n      \"description\" : \"242424\",\r\n      \"size_number\" : \"242424\",\r\n      \"image\" : \"http:\\/\\/comedyclassroom.com\\/uploaded\\/images\\/categories\\/ic_tshirt\",\r\n      \"id\" : \"13\",\r\n      \"category_id\" : \"1\",\r\n      \"size\" : \"4242\",\r\n      \"is_active\" : true,\r\n      \"price\" : \"242.00\"\r\n    }\r\n  ],\r\n  \"customer_name\" : \"nail\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{local}}/api/place-order",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"place-order"
+									]
+								},
+								"description": "Create Order And Place To Delivery Order."
+							},
+							"response": []
+						},
+						{
+							"name": "Get Orders List details",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"status\" : \"PENDING\"\n}"
+								},
+								"url": {
+									"raw": "{{live}}/api/orders-list",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"orders-list"
+									]
+								},
+								"description": "* Order Status Constant\n\t-\tconst ORDER_STATUS_COMPLETED = \"COMPLETED\";\n\t*\tconst ORDER_STATUS_RUNNING = \"RUNNING\";\n\t-\tconst ORDER_STATUS_CANCELED = \"CANCELED\";\n\t-\tconst ORDER_STATUS_INCOMPLETE = \"INCOMPLETE\";\n\t-\tconst ORDER_STATUS_PENDING = \"PENDING\";"
+							},
+							"response": []
+						},
+						{
+							"name": "Place Order Total Amount + Discounts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{live}}/api/get-order-details-from-cart",
+									"host": [
+										"{{live}}"
+									],
+									"path": [
+										"api",
+										"get-order-details-from-cart"
+									]
+								},
+								"description": "Get Address List With Country State City"
+							},
+							"response": [
+								{
+									"name": "Place Order Total Amount + Discounts",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{live}}/api/get-order-details-from-cart",
+											"host": [
+												"{{live}}"
+											],
+											"path": [
+												"api",
+												"get-order-details-from-cart"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-credentials",
+											"value": "true",
+											"name": "access-control-allow-credentials",
+											"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+										},
+										{
+											"key": "access-control-allow-headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Authorization, X-Requested-With",
+											"name": "access-control-allow-headers",
+											"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+										},
+										{
+											"key": "access-control-allow-methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS",
+											"name": "access-control-allow-methods",
+											"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+										},
+										{
+											"key": "access-control-allow-origin",
+											"value": "*",
+											"name": "access-control-allow-origin",
+											"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+										},
+										{
+											"key": "access-control-max-age",
+											"value": "86400",
+											"name": "access-control-max-age",
+											"description": "Indicates how long the results of a preflight request can be cached in seconds."
+										},
+										{
+											"key": "cache-control",
+											"value": "no-cache, private",
+											"name": "cache-control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "connection",
+											"value": "close",
+											"name": "connection",
+											"description": "Options that are desired for the connection"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "date",
+											"value": "Mon, 16 Dec 2019 15:24:25 GMT, Mon, 16 Dec 2019 15:24:25 GMT",
+											"name": "date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "host",
+											"value": "localhost:1001",
+											"name": "host",
+											"description": "Custom header"
+										},
+										{
+											"key": "x-powered-by",
+											"value": "PHP/7.3.12",
+											"name": "x-powered-by",
+											"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+										}
+									],
+									"cookie": [],
+									"body": "{\"success\":true,\"status\":200,\"data\":{\"total_amount\":125,\"discount_amount\":0,\"delivery_charges\":50},\"message\":\"Place order details retrieve successfully.\"}"
+								}
+							]
+						},
+						{
+							"name": "Get Order Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{local}}/api/get-order-details/7",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"get-order-details",
+										"7"
+									]
+								},
+								"description": "Get Order Detaail by id"
+							},
+							"response": [
+								{
+									"name": "Place Order Total Amount + Discounts",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{live}}/api/get-order-details-from-cart",
+											"host": [
+												"{{live}}"
+											],
+											"path": [
+												"api",
+												"get-order-details-from-cart"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-credentials",
+											"value": "true",
+											"name": "access-control-allow-credentials",
+											"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+										},
+										{
+											"key": "access-control-allow-headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Authorization, X-Requested-With",
+											"name": "access-control-allow-headers",
+											"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+										},
+										{
+											"key": "access-control-allow-methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS",
+											"name": "access-control-allow-methods",
+											"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+										},
+										{
+											"key": "access-control-allow-origin",
+											"value": "*",
+											"name": "access-control-allow-origin",
+											"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+										},
+										{
+											"key": "access-control-max-age",
+											"value": "86400",
+											"name": "access-control-max-age",
+											"description": "Indicates how long the results of a preflight request can be cached in seconds."
+										},
+										{
+											"key": "cache-control",
+											"value": "no-cache, private",
+											"name": "cache-control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "connection",
+											"value": "close",
+											"name": "connection",
+											"description": "Options that are desired for the connection"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json",
+											"name": "content-type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "date",
+											"value": "Mon, 16 Dec 2019 15:24:25 GMT, Mon, 16 Dec 2019 15:24:25 GMT",
+											"name": "date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "host",
+											"value": "localhost:1001",
+											"name": "host",
+											"description": "Custom header"
+										},
+										{
+											"key": "x-powered-by",
+											"value": "PHP/7.3.12",
+											"name": "x-powered-by",
+											"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+										}
+									],
+									"cookie": [],
+									"body": "{\"success\":true,\"status\":200,\"data\":{\"total_amount\":125,\"discount_amount\":0,\"delivery_charges\":50},\"message\":\"Place order details retrieve successfully.\"}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Order Rate And Review",
+					"item": [
+						{
+							"name": "Add Rate And Review on Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"order_id\" : 11,\n\t\"product_id\" : 11,\n\t\"rate\" : 3\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/add-review-on-product",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"add-review-on-product"
+									]
+								},
+								"description": "* Order Status Constant\n\t-\tconst ORDER_STATUS_COMPLETED = \"COMPLETED\";\n\t*\tconst ORDER_STATUS_RUNNING = \"RUNNING\";\n\t-\tconst ORDER_STATUS_CANCELED = \"CANCELED\";\n\t-\tconst ORDER_STATUS_INCOMPLETE = \"INCOMPLETE\";\n\t-\tconst ORDER_STATUS_PENDING = \"PENDING\";"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Offers",
+					"item": [
+						{
+							"name": "Create Offer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Offer 1\",\n\t\"code\" : \"OFFER_1\",\n\t\"discount\" : \"1\",\n\t\"valid_from\" : \"2019-12-19T17:59:27.596Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/offers-create",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"offers-create"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "All Device Side APIs Collection\n",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
